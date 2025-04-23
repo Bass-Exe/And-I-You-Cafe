@@ -1,25 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 
 :root{
-    --bg-main:
-     background-color: white;
-    color: black;
 
-    --bg-dark: 
-    background-color: #333;
-    color: white;
+    --bg-main: white;
+    --bg-dark: #333;
+    --font-family-main: "Abril Fatface", serif;
+    --font-family-accent: "Playfair Display", serif;
 
-
-    --font-family-main:   
-    font-family: "Abril Fatface", serif;
-    font-weight: 400;
-    font-style: normal;
-
-    --font-family-accent: 
-    font-family: "Italiana", sans-serif;
-    font-weight: 400;
-    font-style: normal;
 
 }
 
@@ -47,6 +36,8 @@
     -webkit-font-smoothing: antialiased;
     font-family: var(--font-family-accent);
     color: var(--font-family-main);
+    overflow-x: hidden;
+    /*just incase you need to change this remember this meant to stop overflow*/
   }
   
   /* 6. Improve media defaults */
@@ -97,13 +88,120 @@
 /*-----------------------------------Header------------------------------------*/
 
 header{
-    background-color: rgba(76, 165, 2, 0.74);
     margin-inline: auto;
-    width: 80%;
-    border-radius: 0 0 15px 15px;
-    backdrop-filter: blur(10px);
-    
+    width: 100%;
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0px;
+    padding: .6em;
+    z-index: 999;
 }
 
+.nav{
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(10px);
+}
 
+.nav__list{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
+.nav__items{
+  list-style: none;
+}
+
+.nav__links{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  transition: color 250ms ease-in;
+}
+
+.nav__links:hover{
+  color: rgb(126, 124, 124);
+}
+
+.logo{
+  width: 80px;
+  height: 80px;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.wrapper{
+  background: hsla(40, 94%, 68%, 1);
+  background: linear-gradient(90deg, rgb(147, 99, 4) 0%, rgb(160, 113, 20) 0%, rgb(18, 18, 18) 53%);
+  background: -moz-linear-gradient(90deg, rgb(147, 99, 4) 0%, rgb(160, 113, 20) 0%, rgb(18, 18, 18) 53%);
+  background: -webkit-linear-gradient(90deg, rgb(147, 99, 4) 0%, rgb(160, 113, 20) 0%, rgb(18, 18, 18) 35%);
+  height: 90svh;
+  width: 100svw;
+}
+
+.hero-section{
+  width: auto;
+  max-height: 600px;
+  padding: 3em;
+}
+
+.hero-text{
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  font-family: var(--font-family-accent);
+  font-weight: 400;
+  color: white;
+  font-style: italic;
+}
+
+.hero__span{
+  color: goldenrod;
+}
+
+.hero-btn{
+  text-align: center;
+}
+
+.btn{
+  cursor: pointer;
+  border: goldenrod 1px solid;
+  background-color: goldenrod;
+  width: 30%;
+  text-transform: uppercase;
+  color: rgb(30, 29, 29);
+  border-radius: 20px;
+  font-weight: 900;
+  padding:  6px 15px;
+  margin-top: 4em;
+  transition: all 150ms ease-in;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, .4);
+}
+
+.btn:hover{
+  background: transparent;
+  color: white;
+}
+
+.test-video{
+  margin-top: 7em;
+}
+
+.test-video iframe{
+  border-radius: 20px;
+  width: 700px;
+  min-height: 600px;
+  margin: 0 auto;
+  display: block;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: auto;
+  margin:  3em auto;
+}
