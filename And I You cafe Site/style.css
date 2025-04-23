@@ -221,6 +221,14 @@ header{
 
 .card-container{
   border: red solid 1px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center
+}
 
-
+.card-img{
+  width: 100px;
+  height: 100px;
+  background-color: #333;
+  border-radius: 50%;
 }
