@@ -87,6 +87,7 @@
 
 .section{
   margin: 2em 0;
+  padding: .5em;
 }
 
 .clear{
@@ -164,10 +165,10 @@ header{
 
 .hero-text{
   font-size: 3rem;
-  font-weight: 900;
   text-align: center;
   font-family: var(--font-family-accent);
   font-weight: 400;
+  font-style: italic;
   color: white;
  
 }
@@ -211,7 +212,6 @@ header{
 }
 
 .hero-video{
-
   position: relative;
   width: 600px;
   height: 600px;
@@ -248,7 +248,7 @@ header{
 .cards{
   max-width: 400px;
   width: 50%;
-  height: 400px;
+  max-height: 700px;
   margin-inline: 1em;
   border-radius: 10px;
   padding: 2em;
@@ -259,4 +259,42 @@ header{
   align-items: center;
   text-align: left;
   box-shadow: 0px 0px 15px rgba(126, 124, 124, 0.9);
+}
+/*-----------------about-----------*/
+.about-title{
+  margin: 2em;
+}
+
+.about-flex{
+  display: flex;
+  flex-direction : row;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+  border: red solid 1px;
+  width: 100%;
+}
+
+.about-text{
+  width: 60%;
+  margin-left: 1em;
+  padding: 1em;
+
+
+}
+.about-img img{
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+
+.about-img img::before{
+  position: absolute;
+  content: "";
+  top: 0%;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: red;
 }
