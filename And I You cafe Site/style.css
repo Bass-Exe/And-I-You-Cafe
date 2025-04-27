@@ -37,6 +37,7 @@
     font-family: var(--font-family-main);
     color: var(--font-family-main);
     overflow-x: hidden;
+    background-color: #EDE9E6;
     /*just incase you need to change this remember this meant to stop overflow*/
   }
   
@@ -87,6 +88,7 @@
 
 .section{
   padding: .5em;
+  margin: 2em 0;
 }
 
 .clear{
@@ -131,7 +133,7 @@ header{
 .nav__links{
   text-transform: uppercase;
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
   font-weight: 600;
   transition: color 250ms ease-in;
   position: relative;
@@ -160,29 +162,30 @@ header{
   width: 80px;
   height: 80px;
   background: transparent;
-  border-radius: 50%;
+  border-radius: 50%; 
 }
 
 .wrapper{
   height: 90svh;
   width: 100svw; 
-  background-image: url('images/tesstiong2.png');
+  background-image: url('images/tesstiong2-Photoroom.png');
   background-repeat: no-repeat;
   background-position: center;
   aspect-ratio: 1;
 }
 
 .hero-text{
-  color: rgb(243, 189, 108);  
+  color: rgb(187, 135, 24);  
   font-size: 4rem;
-  letter-spacing: 40px;
+  letter-spacing: 70px;
   font-weight: 900;
   text-transform: uppercase;
   font-family: var(--font-family-accent);
-  position: absolute;
-  text-shadow: 1px 1px 1px #000000;
-  inset:  10% 50%;
+  position: absolute; 
+  top: 40%;
+  text-align: center;
   margin: auto;
+  width: 100%;
 }
 
 .hero-section{
