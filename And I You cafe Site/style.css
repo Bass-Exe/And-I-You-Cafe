@@ -91,15 +91,15 @@
   margin: 2em 0;
 }
 
-.clear{
-  width: 400px;
-  height: 300px;
-  margin: 1em 0;
-}
+
 
 .bg-dark{
   background-color: var(--bg-dark);
   color: white;
+}
+
+.margin-spacing{
+  margin-top: 8em; 
 }
 /*-----------------------------------Header------------------------------------*/
 
@@ -137,7 +137,11 @@ header{
   font-weight: 600;
   transition: color 250ms ease-in;
   position: relative;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+.nav__links:hover{
+  color: black;
 }
 
 
@@ -156,6 +160,7 @@ header{
 
 .nav__links:hover::before{
   width: 100%;
+  color: black;
 }
 
 .logo{
@@ -166,7 +171,7 @@ header{
 }
 
 .wrapper{
-  height: 90svh;
+  height: 85svh;
   width: 100svw; 
   background-image: url('images/tesstiong2-Photoroom.png');
   background-repeat: no-repeat;
@@ -183,10 +188,12 @@ header{
   font-family: var(--font-family-accent);
   position: absolute; 
   top: 40%;
-  text-align: center;
+  text-align: center;           
   margin: auto;
   width: 100%;
+
 }
+
 
 .hero-section{
   width: 100%;
@@ -198,7 +205,6 @@ header{
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  border: red solid 1px;
 }
 
 .hero-text span{
@@ -245,30 +251,52 @@ header{
 }
 
 .hero-video{
-  position: relative;
+  display: block;
+  margin: 0 auto;
   width: 600px;
   height: 600px;
-  margin: 0 auto;
+
+  animation: bounce 2.5s  infinite ease-out;
+}
+
+@keyframes bounce{
+
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-40px);
+  }
+  50%{
+    transform: translateY(-80px);
+  }
+  100%{
+    transform: translateY(-0px);
+  }
+/*must add a return of the same value as the start to have a smooth return after the animation*/
 }
 
 .hero-video iframe{
   height: 100%;
-  width: 500px;
+  width: 100%;
   border-radius: 15px;
 }
+
+
+
 /*----------------------card-section-----------------------*/
 
 .card-container{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 1em;
+  padding: 5em 2em;
+  background-color: rgb(74, 94, 56);
 }
 
 .card-img img{
   width: 100px;
   height: 100px;
-  background-color: #333;
   border-radius: 50%;
   padding: 1em;
   margin: 2em 0;
@@ -285,13 +313,29 @@ header{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   text-align: left;
-  box-shadow: 0px 0px 15px rgba(126, 124, 124, 0.9);
+  color: white;
+  font-family: var(--font-family-accent);
+  font-style: italic;
+  letter-spacing: .1em;
+  
+
+  position: relative;
 }
+
+.cards::before{
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  left: 0%;
+}
+
 /*-----------------about-----------*/
 .about-title{
-  margin: 2em;
+  margin: 2em 0;
 }
 
 .about-flex{
@@ -300,30 +344,34 @@ header{
   padding: 1em;
   justify-content: center;
   align-items: center;
-  border: red solid 1px;
   width: 100%;
+
 }
 
 .about-text{
-  width: 60%;
+  width: 70%;
   margin-left: 1em;
   padding: 1em;
 
 
 }
-.about-img img{
-  width: 200px;
-  height: 200px;
-  position: relative;
+
+.about-img{
+  width: 30%;
+  height: 50%;
 }
 
+.about-img img{
+  border-radius: 15px;
+  border: none;
+}
 
-.about-img img::before{
-  position: absolute;
-  content: "";
-  top: 0%;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  background-color: red;
+/*Footer*/
+
+.footer{
+  border: red solid 1px;
+  width: 100%;
+  background-color: rgb(74, 94, 56);
+  padding: 2em;
+
 }
