@@ -183,7 +183,7 @@ header{
   color: rgb(97, 59, 3);  
   font-size: 4rem;
   letter-spacing: 70px;
-  font-weight: 900;
+  font-weight: 900;                               
   text-transform: uppercase;
   text-shadow: rgb(255, 251, 251) 0px 1.5px 2px;
   font-family: var(--font-family-accent);
