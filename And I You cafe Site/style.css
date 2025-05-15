@@ -104,23 +104,30 @@
 /*-----------------------------------Header------------------------------------*/
 
 header{
-   
-    width: 100%;
-    backdrop-filter: blur(10px);
-    background-color: rgb(237, 233, 230, .5);
-    position: sticky;
-    top: 0px;
-    padding: .6em;
-    z-index: 999;    
+  text-align: center;
+  display: flex;
+
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgb(237, 233, 230, .5);
+  top: 0;
+  position: sticky;
+  padding: 1em 2em;
+  z-index: 999;    
 }
 
 .nav{
-  width: 60%;
+  width: 100%;
   margin-inline: auto;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  padding: 2em;
+  width: 100%;
+  padding: .6em;
+
+  text-align: center;
 }
 
 .nav__list{
@@ -174,43 +181,56 @@ header{
   border-radius: 50%; 
 }
 
-.carousel-container{
-  width: 80%;
-  height: 100svh;
+/*******************sliders section *********************/
+
+.carousel-container {
+  width: 90svw;
+  height: 90svh;
+  overflow: hidden;
+
+  position: relative;
   margin-inline: auto;
 }
 
-
-.slide{
-position: absolute;
-width: 100%;
-height: 100%;
-transition: opacity 1s;
-}
-
-.slide img{
-  opacity: 0.6;
-  height: 100%;
+.slides{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .8s ease-in-out;
 }
 
+.slides img{
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.slides.active {
+  opacity: 1;
+}
 
 
 .hero-text{
   color: rgb(97, 59, 3);  
-  font-size: 4rem;
-  letter-spacing: 70px;
+  font-size: 2rem;
+  letter-spacing: 50px;
   font-weight: 900;                               
   text-transform: uppercase;
-  text-shadow: rgb(255, 251, 251) 0px 1.5px 2px;
+  text-shadow: rgb(0, 0, 0) 0px 1.5px 2px;
   font-family: var(--font-family-accent);
+
   position: absolute; 
   top: 40%;
+  left: 0;
+  right: 0;
   text-align: center;           
-  margin: auto;
+  margin-inline: auto;
   width: 100%;
-
 }
 
 
@@ -392,5 +412,13 @@ transition: opacity 1s;
   width: 100%;
   background-color: rgb(74, 94, 56);
   padding: 2em;
+
+}
+
+
+@media screen and (min-width: 700px){
+  .slides img{
+    object-position: center;
+  }
 
 }
