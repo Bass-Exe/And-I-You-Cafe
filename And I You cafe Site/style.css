@@ -5,6 +5,7 @@
 :root{
 
     --bg-main: white;
+    --bg-block-light-color: rgb(216, 196, 149);
     --bg-dark: rgb(18, 18, 18);
     --font-family-main:"Poppins", sans-serif;
     --font-family-accent: "Playfair Display", serif;
@@ -37,7 +38,8 @@
     font-family: var(--font-family-main);
     color: var(--font-family-main);
     overflow-x: hidden;
-    background-color: #EDE9E6;
+    background-color: var(--bg-main);
+    color: #333;
     /*just incase you need to change this remember this meant to stop overflow*/
   }
   
@@ -101,6 +103,14 @@
 .margin-spacing{
   margin-top: 8em; 
 }
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
 /*-----------------------------------Header------------------------------------*/
 
 header{
@@ -109,11 +119,13 @@ header{
 
   width: 100%;
   backdrop-filter: blur(10px);
-  background-color: rgb(237, 233, 230, .5);
+  background-color: rgba(244, 238, 231, 0.5);
   top: 0;
   position: sticky;
   padding: 1em 2em;
-  z-index: 999;    
+  z-index: 999;  
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+  margin-bottom: 2em;
 }
 
 .nav{
@@ -144,7 +156,7 @@ header{
 .nav__links{
   text-transform: uppercase;
   text-decoration: none;
-  color: #000000;
+  color: #333;
   font-weight: 600;
   transition: color 250ms ease-in;
   position: relative;
@@ -152,7 +164,7 @@ header{
 }
 
 .nav__links:hover{
-  color: black;
+  opacity: .45;
 }
 
 
@@ -163,25 +175,25 @@ header{
   bottom: -15%;
   left: 0;
   border-radius: 20%;
-  background-color: rgb(46, 48, 45);
+  background-color: rgb(0, 0, 0);
   position: absolute;
-
   transition: width 250ms ease-in;
 }
 
 .nav__links:hover::before{
   width: 100%;
   color: black;
+  opacity: 1;
 }
 
 .logo{
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background: transparent;
   border-radius: 50%; 
 }
 
-/*******************sliders section *********************/
+/*---------------sliders section---------------------*/
 
 .carousel-container {
   width: 90svw;
@@ -233,23 +245,6 @@ header{
   width: 100%;
 }
 
-
-.hero-section{
-  width: 100%;
-  max-height: 600px;
-  padding: 3em; 
-  margin: 3em 0;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.hero-text span{
-  color: rgb(65, 160, 108);
-}
-
 .hero-btn{
   text-align: center;
 }
@@ -273,30 +268,7 @@ header{
   color: white;
 }
 
-.flex{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-}
 
-
-.hero-img{
-  background-image: url("images/test.png");
-  background-position: center;
-  width: 50%;
-  height: 400px;
-}
-
-.hero-video{
-  display: block;
-  margin: 0 auto;
-  width: 600px;
-  height: 600px;
-
-  animation: bounce 2.5s  infinite ease-out;
-}
 
 @keyframes bounce{
 
@@ -315,12 +287,6 @@ header{
 /*must add a return of the same value as the start to have a smooth return after the animation*/
 }
 
-.hero-video iframe{
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-}
-
 
 
 /*----------------------card-section-----------------------*/
@@ -329,8 +295,10 @@ header{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-direction: column;
   padding: 5em 2em;
-  background-color: rgb(74, 94, 56);
+  background-color: var(--bg-block-light-color);
+  border-radius: 20px;
 }
 
 .card-img img{
@@ -339,11 +307,13 @@ header{
   border-radius: 50%;
   padding: 1em;
   margin: 2em 0;
+  background-color: #333;
 }
+
 
 .cards{
   max-width: 400px;
-  width: 50%;
+  width: 100%;
   max-height: 700px;
   margin-inline: 1em;
   border-radius: 10px;
@@ -354,11 +324,11 @@ header{
   justify-content: center;
   align-items: left;
   text-align: left;
-  color: white;
   font-family: var(--font-family-accent);
   font-style: italic;
+  font-weight: 700;
   letter-spacing: .1em;
-  
+
 
   position: relative;
 }
@@ -417,8 +387,18 @@ header{
 
 
 @media screen and (min-width: 700px){
+  .hero-text{
+    font-size: 4rem;
+    letter-spacing: 50px;
+  }
   .slides img{
     object-position: center;
+  }
+  .card-container{
+    flex-direction: row;
+  }
+  .cards{
+    width: 50%;
   }
 
 }
