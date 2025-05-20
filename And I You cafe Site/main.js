@@ -31,3 +31,20 @@ function stopAutoplay() {
 // Initialize the carousel and start autoplay
 showSlide(currentIndex);
 startAutoplay();
+
+
+function handleIntersection(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible'); // Add the class when in view
+      observer.unobserve(entry.target); // Stop observing once triggered
+    }
+  });
+}
+
+const observer = new IntersectionObserver(handleIntersection, { threshold: 0.3 });//threshold is used to see how far till it in the viewer sight lower the faster
+
+const fadeInSectionElements = document.querySelectorAll('.hidden');
+fadeInSectionElements.forEach(element => {
+  observer.observe(element); // Start observing each element
+});
