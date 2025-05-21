@@ -42,7 +42,7 @@ function handleIntersection(entries) {
   });
 }
 
-const observer = new IntersectionObserver(handleIntersection, { threshold: 0.3 });//threshold is used to see how far till it in the viewer sight lower the faster
+const observer = new IntersectionObserver(handleIntersection, { threshold: 0.4});//threshold is used to see how far till it in the viewer sight lower the faster
 
 const fadeInSectionElements = document.querySelectorAll('.hidden');
 fadeInSectionElements.forEach(element => {

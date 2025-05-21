@@ -97,12 +97,16 @@ h6 {
 /*--Javascript styles*/
 .hidden {
   opacity: 0;
-  transition: opacity .7s ease-in-out; /* Adjust duration and easing as needed */
+  transform: translateY(-10%);
+  transition: all  0.7s ease-in-out; /* Adjust duration and easing as needed */
 }
 
 .hidden.is-visible {
   opacity: 1;
+  transform: translateY(0%);
 }
+
+
 /*
   General styling
   */
@@ -127,7 +131,7 @@ h6 {
 }
 
 .bg-green {
-  background-color: rgb(12, 83, 12);
+  background-color: rgb(6, 49, 26);
   color: rgb(216, 196, 149);
   padding: 5em 0;
 }
@@ -135,6 +139,7 @@ h6 {
 .text-center {
   text-align: center;
 }
+
 .margin-top {
   margin-top: 0.5em;
 }
