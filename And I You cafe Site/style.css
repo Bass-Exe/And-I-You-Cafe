@@ -4,7 +4,7 @@
 
 :root {
   --bg-main: white;
-  --bg-block-light-color: rgb(216, 196, 149);
+  --bg-block-light-color: rgba(154, 122, 53, 0.5);
   --bg-dark: rgb(18, 18, 18);
   --font-family-main: "Poppins", sans-serif;
   --font-family-accent: "Playfair Display", serif;
@@ -147,8 +147,6 @@ h6 {
 .flex {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 /*-----------------------------------Header------------------------------------*/
 
@@ -226,9 +224,21 @@ header {
   height: 60px;
   background: transparent;
   border-radius: 50%;
+  box-shadow:0px 0px 8px rgba(0, 0, 0, 0.5)
 }
 
 /*---------------sliders section---------------------*/
+
+.wrapper{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100svh;
+  width: 100svw;
+  background-color: rgba(6, 6, 6, 0.3);
+  backdrop-filter: blur(1px);
+  z-index: 99;
+}
 
 .carousel-container {
   width: 95svw;
@@ -237,6 +247,7 @@ header {
 
   position: relative;
   margin-inline: auto;
+  border-radius: 20px;
 }
 
 .slides {
@@ -250,11 +261,10 @@ header {
 }
 
 .slides img {
-  border-radius: 20px;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: bottom;
+  object-position: 80% 50%;
 }
 
 .slides.active {
@@ -262,13 +272,13 @@ header {
 }
 
 .hero-text {
-  color: var(--font-title-colors);
-  font-size: 2rem;
-  letter-spacing: 50px;
+  color: white;
+  font-size: 2.5rem;
+  letter-spacing: 40px;
   font-weight: 900;
   text-transform: uppercase;
   font-family: var(--font-family-accent);
-  text-shadow: rgb(0, 0, 0, 0.5) 0px 1.5px 2px;
+  text-shadow: rgba(141, 140, 140, 0.8) 0px 1.5px 8px;
 
   position: absolute;
   top: 40%;
@@ -277,6 +287,7 @@ header {
   text-align: center;
   margin-inline: auto;
   width: 100%;
+  z-index: 99;
 }
 
 .hero-btn {
@@ -302,22 +313,6 @@ header {
   color: white;
 }
 
-/* @keyframes bounce{
-
-  0%{
-    transform: translateY(0);
-  }
-  50%{
-    transform: translateY(-40px);
-  }
-  50%{
-    transform: translateY(-80px);
-  }
-  100%{
-    transform: translateY(-0px);
-  } */
-/*must add a return of the same value as the start to have a smooth return after the animation*/
-
 /*----------------------card-section-----------------------*/
 
 .card-container {
@@ -331,6 +326,7 @@ header {
   box-shadow: var(--box-shadows);
   width: 90%;
   margin-inline: auto;
+  
 }
 
 .card-img img {
@@ -375,12 +371,9 @@ header {
 /*-----------------about-----------*/
 
 .about {
-  padding: 2em;
+  padding: 1em;
 }
 
-.about-text {
-  width: 100%;
-}
 
 .about-text h2 {
   text-align: center;
@@ -388,11 +381,13 @@ header {
   text-transform: uppercase;
   font-family: var(--font-family-accent);
   color: var(--bg-block-light-color);
-  text-shadow: rgb(0, 0, 0, 0.5) 0px 1.5px 2px;
+  text-shadow: rgb(0, 0, 0, 0.4) 0px 1px 7px;
   padding-bottom: 1em;
 }
 
 .about-text {
+  width: 100%;
+  margin-bottom: 2em;
   padding: 2em 0;
 }
 
@@ -455,6 +450,30 @@ header {
   border-radius: 20px;
   background-color: rgb(172, 147, 5);
 }
+
+/*---------------Location-------------*/
+.location{
+  width: 100%;
+  margin: 2em 0;
+}
+
+.location-text{
+  justify-items: left;
+  background-color: var(--bg-block-light-color);
+  border-radius: 20px;
+  box-shadow: var(--box-shadows);
+  padding: 1.5em 1.5em;
+}
+
+.location div{
+  margin: 2em 0;
+}
+
+.location-img img{
+  width: 100%;
+  box-shadow: var(--box-shadows);
+  border-radius: 20px;
+}
 /*Footer*/
 
 .footer {
@@ -473,20 +492,15 @@ header {
     font-size: 4rem;
     letter-spacing: 50px;
   }
-
-  .about {
-    align-items: flex-start;
-  }
-
   .about-text {
-    align-items: flex-start;
+    align-items: center;
     height: auto;
-    margin-right: 1em;
-    width: 60%;
+    width: 40%;
   }
 
   .about-img {
-    width: 40%;
+    width: 60%;
+    margin-left: 2em;
   }
 
   .left-panel{
@@ -499,7 +513,8 @@ header {
   }
 
   .slides img {
-    object-position: center;
+    object-fit: cover;
+    object-position: 50% 60%;
   }
 
   .card-container {
@@ -508,5 +523,19 @@ header {
 
   .cards {
     width: 50%;
+  }
+
+  .location{
+    gap: 22px;
+  }
+  .location-text{
+    width: 40%;
+  }
+  .location div {
+    color: white
+  }
+
+  .location-img{
+    width: 60%;
   }
 }
