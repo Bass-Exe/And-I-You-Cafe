@@ -98,14 +98,13 @@ h6 {
 .hidden {
   opacity: 0;
   transform: translateY(-10%);
-  transition: all  0.7s ease-in-out; /* Adjust duration and easing as needed */
+  transition: all 0.7s ease-in-out; /* Adjust duration and easing as needed */
 }
 
 .hidden.is-visible {
   opacity: 1;
   transform: translateY(0%);
 }
-
 
 /*
   General styling
@@ -121,7 +120,7 @@ h6 {
 }
 
 .section {
-  padding: .5em;
+  padding: 0.5em;
   margin: 2em 0;
 }
 
@@ -224,12 +223,12 @@ header {
   height: 60px;
   background: transparent;
   border-radius: 50%;
-  box-shadow:0px 0px 8px rgba(0, 0, 0, 0.5)
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
 /*---------------sliders section---------------------*/
 
-.wrapper{
+.wrapper {
   position: absolute;
   left: 0;
   top: 0;
@@ -326,7 +325,6 @@ header {
   box-shadow: var(--box-shadows);
   width: 90%;
   margin-inline: auto;
-  
 }
 
 .card-img img {
@@ -374,14 +372,13 @@ header {
   padding: 1em;
 }
 
-
 .about-text h2 {
   text-align: center;
   font-size: 2rem;
   text-transform: uppercase;
   font-family: var(--font-family-accent);
-  color: var(--bg-block-light-color);
-  text-shadow: rgb(0, 0, 0, 0.4) 0px 1px 7px;
+  color: rgb(6, 49, 26);
+  text-shadow: rgba(182, 152, 32, 0.4) 0px 2px 3px;
   padding-bottom: 1em;
 }
 
@@ -408,7 +405,7 @@ header {
   font-family: var(--font-family-accent);
 }
 
-.panel-title{
+.panel-title {
   text-transform: uppercase;
 }
 
@@ -424,7 +421,7 @@ header {
 
 .item {
   margin: 1em 0;
-  padding: 2em 0 ;
+  padding: 2em 0;
   position: relative;
 }
 
@@ -433,7 +430,7 @@ header {
   color: whitesmoke;
 }
 
-.item span{
+.item span {
   text-align: right;
   position: absolute;
   right: 0;
@@ -451,35 +448,96 @@ header {
   background-color: rgb(172, 147, 5);
 }
 
-/*---------------Location-------------*/
-.location{
+/*---------------Visit Us -------------*/
+.location {
   width: 100%;
   margin: 2em 0;
 }
 
-.location-text{
+.location-text {
   justify-items: left;
   background-color: var(--bg-block-light-color);
   border-radius: 20px;
   box-shadow: var(--box-shadows);
   padding: 1.5em 1.5em;
+  color: white;
 }
 
-.location div{
+.location div {
   margin: 2em 0;
 }
 
-.location-img img{
+.location-text h2 {
+  color: black;
+}
+
+.location-img img {
   width: 100%;
   box-shadow: var(--box-shadows);
   border-radius: 20px;
 }
+
+/*---------Visit-------------*/
+.visit-title {
+  font-size: 3rem;
+  margin-bottom: 0.8em;
+  font-family: var(--font-family-accent);
+  position: relative;
+}
+
+.visit-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 20px;
+}
+
 /*Footer*/
 
 .footer {
   width: 100%;
-  background-color: rgb(74, 94, 56);
-  padding: 2em;
+}
+
+.footer-text h2 {
+  text-transform: uppercase;
+  font-family: var(--font-family-accent);
+  margin-bottom: 0.5em;
+}
+
+.nav-footer p {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.nav-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav__footer-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__items-footer {
+  list-style: none;
+  margin: 1em 1.5em 1em 0em;
+}
+
+.nav__links-footer {
+  text-decoration: none;
+  color: white;
+}
+
+.nav__links-footer:hover {
+  transform: scale(2);
 }
 
 @media screen and (min-width: 700px) {
@@ -503,12 +561,12 @@ header {
     margin-left: 2em;
   }
 
-  .left-panel{
+  .left-panel {
     margin: 0;
     margin-right: 1em;
   }
 
-  .right-panel{
+  .right-panel {
     margin: 0;
   }
 
@@ -525,17 +583,23 @@ header {
     width: 50%;
   }
 
-  .location{
-    gap: 22px;
-  }
-  .location-text{
-    width: 40%;
-  }
-  .location div {
-    color: white
+  .location {
+    gap: 100px;
   }
 
-  .location-img{
+  .location-text {
+    width: 40%;
+  }
+
+  .location div {
+    color: white;
+  }
+
+  .location-img {
     width: 60%;
+  }
+
+  .nav-footer {
+    flex-direction: row;
   }
 }
