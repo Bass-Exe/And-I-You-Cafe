@@ -7,6 +7,7 @@
   --bg-block-light-color: rgba(154, 122, 53, 0.5);
   --bg-dark: rgb(18, 18, 18);
   --bg-green-block:  rgb(6, 49, 26);
+  --gold-text: rgb(216, 196, 149);
   --font-family-main: "Poppins", sans-serif;
   --font-family-accent: "Playfair Display", serif;
   --font-title-colors: rgb(97, 59, 3);
@@ -330,44 +331,27 @@ header {
 
 .card-container {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  padding: 5em 2em;
-  background-color: var(--bg-block-light-color);
-  border-radius: 15px;
-  box-shadow: var(--box-shadows);
-  width: 90%;
-  margin-inline: auto;
-}
-
-.card-img img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  padding: 1em;
-  margin: 2em 0;
-  background-color: #333;
+  width: 100%;
+  margin-top: 2.5em;
 }
 
 .cards {
-  max-width: 400px;
   width: 100%;
-  max-height: 700px;
-  margin-inline: 1em;
+  max-height: 500px;
   border-radius: 10px;
-  padding: 2em;
+  padding: 1em;
+  background-color: var(--bg-green-block);
+  border-radius: 15px;
+  box-shadow: var(--box-shadows);
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
   text-align: left;
   font-family: var(--font-family-accent);
   font-style: italic;
   font-weight: 700;
-  letter-spacing: 0.1em;
-
+  margin-bottom: 2em;
   position: relative;
 }
 
@@ -375,15 +359,36 @@ header {
   content: "";
   position: absolute;
   width: 2px;
-  height: 100%;
+  height: 50%;
   background-color: white;
-  left: 0%;
+  left: 10px;
+}
+
+.card-text p{
+  padding: .5em;
+  font-size: .8rem;
+  font-style: normal;
+  color: white;
+  text-align: center;
+}
+
+.card-text h3{
+  margin: 1em 0;
+  color: var(--gold-text);
+  text-align: center;
+}
+
+.card-img img {
+  width: 50px;
+  height: 50px;
+  margin-inline: auto;
 }
 
 /*-----------------about-----------*/
 
 .about {
   padding: 1em;
+  margin: 3em 0;
 }
 
 .about-text h2 {
@@ -399,7 +404,6 @@ header {
 .about-text {
   width: 100%;
   margin-bottom: 2em;
-  padding: 2em 0;
 }
 
 .about-img {
@@ -524,11 +528,29 @@ header {
   background-color: white;
   border: rgba(253, 253, 253, 0.5) solid 1px;
   border-radius : 50%;
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
   margin: 3em auto;
-
+  padding: 1.5em;
   box-shadow: var(--box-shadows);
+
+  animation: bounce 2.5s infinite;
+}
+
+@keyframes bounce{
+  0%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(40px);
+  }
+   50%{
+    transform: translateY(-40px);
+  }
+   100%{
+    transform: translateY(0px);
+  }
+
 }
 /*------------Event-----------------------*/
 
@@ -547,19 +569,17 @@ header {
   margin-bottom: 2em;
 }
 
-.event-info{
-  width: 30%;
-  text-align: left;
+.event-info {
+  width: 100%;
+  text-align: center;
   padding: 1em;
   color:  white;
   font-style: italic;
+  margin-bottom: 2em;
 }
 
 .event-img{
-  width: 70%;
-  margin-left: 2em ;
-
-
+  width: 100%;
 }
 
 .event-img img{
@@ -622,14 +642,14 @@ header {
     font-size: 4rem;
     letter-spacing: 50px;
   }
+
   .about-text {
-    align-items: center;
-    height: auto;
-    width: 40%;
+    align-items: flex-start;
+    width: 60%;
   }
 
   .about-img {
-    width: 60%;
+    width: 50%;
     margin-left: 2em;
   }
 
@@ -652,7 +672,9 @@ header {
   }
 
   .cards {
-    width: 50%;
+    max-width: 200px;
+    width: 100%;
+    margin-right: 2em;
   }
 
   .location {
@@ -671,7 +693,18 @@ header {
     width: 60%;
   }
 
+  .event-info {
+    width: 30%;
+    text-align: center;
+  }
+
+  .event-img{
+    width: 70%;
+    margin-left: 2em ;
+  }
+
   .nav-footer {
     flex-direction: row;
   }
+
 }
