@@ -278,18 +278,29 @@ header {
   font-weight: 900;
   text-transform: uppercase;
   font-family: var(--font-family-accent);
-  text-shadow: rgba(34, 34, 34, 0.8) 0px 8px 5px;
+  text-shadow: rgba(141, 140, 140, 0.8) 0px 1.5px 8px;
 
   position: absolute;
   top: 40%;
   left: 0;
   right: 0;
   text-align: center;
-  margin-inline: auto;
-  width: 100%;
   z-index: 99;
+
+  position: relative;
 }
 
+.hero-text::before{
+  content: '';
+  position: absolute;
+  left: 50px;
+  bottom: -20px;
+  height: 3px;
+  width: 50%;
+  background-color: white;
+  border-radius: 70px;
+
+}
 .hero-btn {
   text-align: center;
 }
