@@ -101,7 +101,7 @@ h6 {
 .hidden {
   opacity: 0;
   transform: translateY(-10%);
-  transition: all 0.7s ease-in-out; /* Adjust duration and easing as needed */
+  transition: all 0.8s ease-in; /* Adjust duration and easing as needed */
 }
 
 .hidden.is-visible {
@@ -406,6 +406,9 @@ header {
   margin-bottom: 2em;
 }
 
+.about-text p{
+  text-align: center;
+}
 .about-img {
   width: 100%;
 }
