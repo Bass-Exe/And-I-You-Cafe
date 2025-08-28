@@ -591,6 +591,52 @@ header {
 }
 
 
+/*COntact form*/
+
+
+form{
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 3em;
+  border-radius: 10px;
+
+  box-shadow: var(--box-shadows);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  color: white;
+}
+
+
+iframe{
+  width: 100%;
+  height: 400px;
+  margin-top: 2em;
+  position: relative;
+  z-index: 0;
+
+  background-color: black;
+  margin-bottom: 2.6em;
+}
+
+.form-group input{
+  padding:.5em 1.69em;
+  background-color: transparent;
+  border: none;
+   color: rgb(255, 255, 255);
+}
+
+.form-group textarea{
+  padding: .8em 1em;
+  resize: vertical;
+  width: 100%;
+  min-height: 100px;
+  background-color: #333;
+}
 /*Footer*/
 
 .footer {
