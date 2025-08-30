@@ -490,7 +490,19 @@ header {
 }
 
 .location-text h2 {
-  color: black;
+  color: var(--bg-green-block);
+  margin-bottom: 1.4em;
+  position: relative;
+}
+
+.location-text h2:before{
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: var(--bg-green-block);
+  bottom: -10px;
+  left: 0;
+  position: absolute;
 }
 
 .location-img img {
@@ -576,7 +588,9 @@ header {
 }
 
 .event-info {
-  width: 100%;
+  width: 40%;
+  font-size: 1.325rem;
+  font-family: var(--font-family-accent);
   text-align: center;
   padding: 1em;
   color: white;
@@ -585,7 +599,7 @@ header {
 }
 
 .event-img {
-  width: 100%;
+  width: 60%;
 }
 
 .event-img img {
@@ -599,7 +613,7 @@ form {
   position: absolute;
   top: -60px;
   right: -15px;
-  z-index: 999;
+  z-index: 998;
   display: flex;
   flex-direction: column;
   gap: 1em;
