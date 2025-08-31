@@ -390,6 +390,7 @@ header {
 .about {
   padding: 1em;
   margin: 3em 0;
+  align-items: center;
 }
 
 .about-text h2 {
@@ -588,8 +589,6 @@ header {
 }
 
 .event-info {
-  width: 40%;
-  font-size: 1.325rem;
   font-family: var(--font-family-accent);
   text-align: center;
   padding: 1em;
@@ -599,7 +598,7 @@ header {
 }
 
 .event-img {
-  width: 60%;
+  width: 100%;
 }
 
 .event-img img {
@@ -779,7 +778,16 @@ iframe {
     max-width: 200px;
     width: 100%;
     margin-right: 2em;
+    padding: 2em;
+    transition: all 250ms ease-in;
   }
+
+  .cards:hover{
+    margin: 2em;
+    scale: 1.1;
+
+  }
+
 
   .location {
     gap: 30px;
@@ -800,6 +808,10 @@ iframe {
   .event-info {
     width: 30%;
     text-align: center;
+  }
+
+  .event-info{
+    font-size: 1.325rem
   }
 
   .event-img {
