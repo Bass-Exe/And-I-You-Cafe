@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Italiana&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Mea+Culpa&display=swap');
 :root {
   --bg-main: white;
   --bg-block-light-color: rgba(154, 122, 53, 0.5);
@@ -11,6 +11,7 @@
   --pink-text: rgb(238, 115, 201);
   --font-family-main: "Poppins", sans-serif;
   --font-family-accent: "Playfair Display", serif;
+  --font-family-tes:  "Dancing Script", cursive;
   --font-title-colors: rgb(97, 59, 3);
   --box-shadows: rgba(0, 0, 0, 0.5) 0px 5px 10px;
   --text-shadows: rgba(0, 0, 0, 0.8) 10px 15px 3px;
@@ -633,6 +634,49 @@ iframe {
   box-shadow: var(--box-shadows);
   border-radius: 20px;
 }
+
+/*Testimonials*/
+
+.tes-wrapper{
+  background-image: url('/And I You cafe Site/images/logo.jpg');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+  background-color: rgba(255, 255, 255, 0.664);
+  backdrop-filter: blur(10px);
+}
+
+
+.testimonials-title{
+  font-family: var(--font-family-tes);
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.testimonials{
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  align-items: center;
+  gap: 1.3em;
+}
+
+.slots{
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: var(--box-shadows); 
+  background-color: rgb(6, 49, 26, .8);
+  backdrop-filter: blur(16px);
+  color: var(--gold-text);
+  font-family: var(--font-family-tes);
+  font-size: 1.1rem;
+  font-weight: 400;
+
+  flex: 2 1 200px;
+}
+
 
 /*COntact form*/
 
