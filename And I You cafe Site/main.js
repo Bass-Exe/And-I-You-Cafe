@@ -16,7 +16,7 @@ function nextSlide() {
 
 function prevSlide() {
   currentIndex =
-    (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+  (currentIndex - 1 + carouselItems.length) % carouselItems.length;
   showSlide(currentIndex);
 }
 

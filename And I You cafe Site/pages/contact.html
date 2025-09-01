@@ -23,12 +23,21 @@
     </nav>
   </header>
 
-  <main>
+  <main class="form-vibe">
 
-    <div class="form-wrapper">
-          <form class="hidden" action="https://formsubmit.co/your@email.com" method="POST">
-            <h2 class="form-title">Book an Event</h2>
-            <div class="form-group">
+    <div class="container | form-flex">
+
+      <div class="form-img">
+        <div class="img-content">
+          <p>Book An Event</p>
+        </div>
+        <img src="/And I You cafe Site/images/coffee-brain-caffeine-neuroscincces.webp" alt="">
+      </div>
+
+      <div class="form-wrapper">
+          <form class="" action="https://formsubmit.co/your@email.com" method="POST">
+            <!-- <h2 class="form-title">Book an Event</h2> -->
+            <div class="form-group | margin-top-xl">
               <label for="text">Name</label>
               <input type="text" id="name" name="name" required />
             </div>
@@ -38,7 +47,7 @@
             </div>
             <div class="form-group">
                <label for="text">Phone Number</label>
-              <input type="tel" name="phone" required/>
+              <input type="text" inputmode="numeric" pattern="[0-9]" name="phone" required/>
             </div>
             <div class="form-group">
               <textarea name="message" rows="5" placeholder="How can we help you?"" required></textarea>
@@ -46,8 +55,9 @@
                 <button type="submit" class="form-btn">Send</button>
             </div>
          </form>
-
         </div>
+
+      </div>
 
     
   </main>
@@ -73,7 +83,7 @@
   </footer>
 
 
-<script src="main.js"></script>
+<script src="/And I You cafe Site/main.js"></script>
 
 </body>
 </html>
