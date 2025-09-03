@@ -49,3 +49,19 @@ const fadeInSectionElements = document.querySelectorAll(".hidden");
 fadeInSectionElements.forEach((element) => {
   observer.observe(element); // Start observing each element
 });
+
+
+const navToggle = document.querySelector(".nav-toggle");
+const nav = document.querySelector(".sub-nav");
+const up = document.querySelector(".up");
+const mid = document.querySelector(".mid");
+const down = document.querySelector(".down");
+
+navToggle.addEventListener('click', () => {
+  nav.classList.toggle('nav-open');
+  up.classList.toggle('rotate-down');
+  mid.classList.toggle('fade-out');
+  down.classList.toggle('rotate-up');
+
+
+})
