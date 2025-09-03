@@ -562,41 +562,64 @@ iframe {
 /*---------OR---------*/
 
 .Or {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
   text-transform: uppercase;
-  font-style: italic;
+
   font-family: var(--font-family-accent);
   color: var(--font-title-colors);
 
   background-color: white;
-  border: rgba(253, 253, 253, 0.5) solid 1px;
+  border: rgba(0, 0, 0, 0.377) solid 2px;
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  margin: 3em auto;
+  margin: 4em auto;
   padding: 1.5em;
-  box-shadow: var(--box-shadows);
+  
 
-  animation: bounce 2.5s infinite;
+  animation: bounce 2.5s ease-in-out infinite;
+}
+
+.Or::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 70%;
+  background-color: black;
+  opacity: 0.3;
+  filter: blur(4px);
+  animation: ballShadow 2.5s ease-in-out infinite;
 }
 
 @keyframes bounce {
-  0% {
+  0%,100% {
     transform: translateY(0px);
-  }
-  25% {
-    transform: translateY(40px);
   }
   50% {
-    transform: translateY(-40px);
-  }
-  100% {
-    transform: translateY(0px);
+    transform: translateY(-60px);
   }
 }
+
+ @keyframes ballShadow {
+     0%,100% {
+      top: 190px;
+      width: 280px;
+      height: 60px;
+  }
+
+  50%{
+    top: 200px;
+    width: 80px;
+    height: 60px;
+
+  }
+}
+
 /*------------Event-----------------------*/
 
 #Events {
@@ -605,6 +628,7 @@ iframe {
     rgb(124, 103, 57) 50%,
     var(--pink-text) 50%
   );
+  margin-top: 5em;
 }
 
 #Events h2 {
@@ -713,6 +737,7 @@ iframe {
 
 .img-content p{
   font-size: 4rem;
+  font-weight: 900;
   text-transform: uppercase;
   font-family: var(--font-family-accent);
   color: white;
