@@ -176,7 +176,7 @@ header {
   top: 0;
   position: sticky;
   padding: 0.5em 2em;
-  z-index: 999;
+  z-index: 990;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 /*mobile nav*/
@@ -187,7 +187,7 @@ header {
 
 .sub-nav {
   display: none;
-  transition: all 2s ease-in-out;
+  transition: width 2s ease-in-out;
 }
 
 /*tip of the F day javascript or css reads from top down so write code in that , cant make something do something if it doesn't exist!!@*/
@@ -195,16 +195,16 @@ header {
   display: flex;
   width: 80%;
   height: 100svh;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.6);
   position: fixed;
   top: 0;
-  left: 0px;
+  left: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(10px);
   box-shadow: var(--box-shadows);
-  z-index: 994;
+  z-index: 990;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -263,32 +263,32 @@ header {
   opacity: 0;
 }
 
-.nav__list {
+.sub-nav__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.nav__items {
+.sub-nav__items {
   list-style: none;
   margin: 1.5em 0;
 } 
 
-.nav__links {
+.sub-nav__links {
   font-style: italic;
   font-family: var(--font-family-tes);
   text-transform: uppercase;
   text-decoration: none;
   color: var(--font-title-colors);
-  font-weight: 800;
+  font-weight:  900;
   font-size: 1.5rem;
   position: relative;
   letter-spacing: 1px;
   transition: all 250ms ease-in;
 }
 
-.nav__links::before {
+.sub-nav__links::before {
   content: "";
   width: 0px;
   height: 2px;
@@ -299,11 +299,11 @@ header {
   transition: width 250ms ease-in;
 }
 
-.nav__links:hover {
+.sub-nav__links:hover {
   color: var(--pink-text);
 }
 
-.nav__links:hover::before {
+.sub-nav__links:hover::before {
   width: 100%;
   background-color: var(--pink-text);
 }
@@ -395,23 +395,26 @@ header {
   text-align: center;
 }
 
-.btn {
+.btn { 
   cursor: pointer;
+  display: block;
+  text-decoration: none;
+  text-align: center;
   border: goldenrod 1px solid;
-  background-color: goldenrod;
+  background-color: rgb(0, 0, 0);
   width: 200px;
   text-transform: uppercase;
-  color: rgb(30, 29, 29);
-  border-radius: 18px;
+  color: white;
   font-weight: 550;
-  padding: 5px 15px;
-  margin-top: 4em;
+  padding: 5px 15px; 
+  margin: 4em 0 0 2em;
   transition: all 150ms ease-in;
 }
 
+
 .btn:hover {
-  background: transparent;
-  color: white;
+  background:white;
+  color: rgb(0, 0, 0);
 }
 
 /*----------------------card-section-----------------------*/
@@ -958,6 +961,10 @@ form {
   .nav-toggle {
     display: none;
   }
+    .sub-nav{
+    display: none;
+    /*needed so when resizes happen it doesnt keep showing the sub-nav */
+  }
 
   .nav {
     display: flex;
@@ -968,11 +975,6 @@ form {
     padding: 2em;
     padding: 0.6em;
     text-align: center;
-  }
-
-  .sub-nav{
-    display: none;
-    /*needed so when resizes happen it doesnt keep showing the sub-nav */
   }
 
   .nav__list {
@@ -1015,6 +1017,7 @@ form {
     width: 100%;
     background-color: var(--font-title-colors);
   }
+
   .hero-text {
     font-size: 4rem;
     letter-spacing: 50px;

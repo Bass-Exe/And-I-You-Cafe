@@ -1,3 +1,28 @@
+
+const navToggle = document.querySelector(".nav-toggle");
+const subNav = document.querySelector(".sub-nav");
+const up = document.querySelector(".up");
+const mid = document.querySelector(".mid");
+const down = document.querySelector(".down");
+
+navToggle.addEventListener('click', () => {
+  subNav.classList.toggle('nav-open');
+  up.classList.toggle('rotate-down');
+  mid.classList.toggle('fade-out');
+  down.classList.toggle('rotate-up');
+});
+
+const observer = new IntersectionObserver(handleIntersection, { 
+  threshold: 0.2,
+}); //threshold is used to see how far till it in the viewer sight lower the faster
+
+const fadeInSectionElements = document.querySelectorAll(".hidden");
+fadeInSectionElements.forEach((element) => {
+  observer.observe(element); // Start observing each element
+});
+
+
+
 const carouselContainer = document.querySelector(".carousel-container");
 const carouselItems = document.querySelectorAll(".slides");
 
@@ -40,26 +65,3 @@ function handleIntersection(entries) {
     }
   });
 }
-
-const observer = new IntersectionObserver(handleIntersection, { 
-  threshold: 0.2,
-}); //threshold is used to see how far till it in the viewer sight lower the faster
-
-const fadeInSectionElements = document.querySelectorAll(".hidden");
-fadeInSectionElements.forEach((element) => {
-  observer.observe(element); // Start observing each element
-});
-
-
-const navToggle = document.querySelector(".nav-toggle");
-const subNav = document.querySelector(".sub-nav");
-const up = document.querySelector(".up");
-const mid = document.querySelector(".mid");
-const down = document.querySelector(".down");
-
-navToggle.addEventListener('click', () => {
-  subNav.classList.toggle('nav-open');
-  up.classList.toggle('rotate-down');
-  mid.classList.toggle('fade-out');
-  down.classList.toggle('rotate-up');
-})

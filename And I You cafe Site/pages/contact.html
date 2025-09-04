@@ -9,31 +9,39 @@
 </head>
 
 <body>
-
-      <header>
+  <header>
 
     <a href="/And I You cafe Site/index.html"><img class="logo" src="/And I You cafe Site/images/logo.jpg" alt="Logo" />
     </a>
+
+    <button class="nav-toggle" aria-label="toggle navigation">
+      <span class="up"></span>
+      <span class="mid"></span>
+      <span class="down"></span>
+    </button>
+
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__items"><a href="/And I You cafe Site/index.html" class="nav__links">Home</a></li>
         <li class="nav__items"><a href="/And I You cafe Site/pages/menu.html" class="nav__links">Menu</a></li>
-         <li class="nav__items"><a href="/And I You cafe Site/pages/contact.html" class="nav__links">Contact</a></li>
+        <li class="nav__items"><a href="/And I You cafe Site/pages/contact.html" class="nav__links">Contact</a></li>
       </ul>
     </nav>
 
-     <nav class="sub-nav">
-      <ul class="nav__list">
-        <li class="nav__items"><a href="/And I You cafe Site/index.html" class="nav__links">Home</a></li>
-        <li class="nav__items"><a href="/And I You cafe Site/pages/menu.html" class="nav__links">Menu</a></li>
-         <li class="nav__items"><a href="/And I You cafe Site/pages/contact.html" class="nav__links">Contact</a></li>
+    <nav class="sub-nav">
+      <ul class="sub-nav__list">
+        <li class="sub-nav__items"><a href="/And I You cafe Site/index.html" class="sub-nav__links">Home</a></li>
+        <li class="sub-nav__items"><a href="/And I You cafe Site/pages/menu.html" class="sub-nav__links">Menu</a></li>
+        <li class="sub-nav__items"><a href="/And I You cafe Site/pages/contact.html" class="sub-nav__links">Contact</a>
+        </li>
       </ul>
     </nav>
+    
   </header>
 
   <main class="form-vibe">
 
-    <div class="container | form-flex">
+    <div class="container | hidden | form-flex">
 
       <div class="form-img">
         <div class="img-content">
@@ -43,22 +51,22 @@
       </div>
 
       <div class="form-wrapper">
-          <form action="https://formsubmit.co/your@email.com" method="POST">
-            <!-- <h2 class="form-title">Book an Event</h2> -->
-            <div class="form-group | margin-top-xl">
-              <label for="text">Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-               <label for="text">Email</label>
-              <input type="email" name="email" required/>
-            </div>
-            <div class="form-group">
-               <label for="text">Phone Number</label>
-              <input type="text" inputmode="numeric" pattern="[0-9]" name="phone" required/>
-            </div>
-            <div class="form-group">
-              <textarea name="message" rows="5" placeholder="How can we help you?"" required></textarea>
+        <form action="https://formsubmit.co/your@email.com" method="POST">
+          <!-- <h2 class="form-title">Book an Event</h2> -->
+          <div class="form-group | margin-top-xl">
+            <label for="text">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="text">Email</label>
+            <input type="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="text">Phone Number</label>
+            <input type="text" inputmode="numeric" pattern="[0-9]" name="phone" required />
+          </div>
+          <div class="form-group">
+            <textarea name="message" rows="5" placeholder="How can we help you?"" required></textarea>
             <div class="form-group">
                 <button type="submit" class="form-btn">Send</button>
             </div>
