@@ -21,9 +21,18 @@ fadeInSectionElements.forEach((element) => {
   observer.observe(element); // Start observing each element
 });
 
+function handleIntersection(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible"); // Add the class when in view
+      observer.unobserve(entry.target); // Stop observing once triggered
+    }
+  });
+}
 
 
 const carouselContainer = document.querySelector(".carousel-container");
+const carouselContainerEvents = document.querySelector(".carousel-container-event");
 const carouselItems = document.querySelectorAll(".slides");
 
 let currentIndex = 1;
@@ -56,12 +65,3 @@ function stopAutoplay() {
 // Initialize the carousel and start autoplay
 showSlide(currentIndex);
 startAutoplay();
-
-function handleIntersection(entries) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("is-visible"); // Add the class when in view
-      observer.unobserve(entry.target); // Stop observing once triggered
-    }
-  });
-}
