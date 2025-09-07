@@ -30,10 +30,17 @@ function handleIntersection(entries) {
   });
 }
 
+const pushToTopButton = document.querySelector(".push-to-top");
+pushToTopButton.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Carousel functionality
 
 const carouselContainer = document.querySelector(".carousel-container");
 const carouselContainerEvents = document.querySelector(".carousel-container-event");
 const carouselItems = document.querySelectorAll(".slides");
+const carouselItemsEvents = document.querySelectorAll(".slides-event");
 
 let currentIndex = 1;
 let intervalId;
@@ -41,11 +48,14 @@ let intervalId;
 function showSlide(index) {
   carouselItems.forEach((item) => item.classList.remove("active"));
   carouselItems[index].classList.add("active");
+  carouselItemsEvents.forEach((item) => item.classList.remove("active"));
+  carouselItemsEvents[index].classList.add("active");
 }
 
 function nextSlide() {
   currentIndex = (currentIndex + 1) % carouselItems.length;
   showSlide(currentIndex);
+  
 }
 
 function prevSlide() {

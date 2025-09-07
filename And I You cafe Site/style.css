@@ -160,6 +160,41 @@ h6 {
   display: flex;
   flex-direction: column;
 }
+.main{
+  position: relative;
+}
+
+.push-to-top{
+  border: none;
+  background-color: var(--pink-text);
+  color: var(--gold-text);
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  right: 20px;
+  z-index: 999;
+  bottom: 5%;
+  box-shadow: var(--box-shadows)
+}
+.push-to-top img {
+  margin-inline: auto;
+}
+
+.push-to-top:hover {
+ background-color: var(--bg-green-block);
+  color: white;
+  transform: scale(1.1);
+  transition: all 250ms ease-in;
+}
+
+.push-to-top img:hover {
+  transform: scale(1.3);
+  transition: all 150ms ease-in;
+}
+
+
 
 span {
   text-transform: uppercase;
@@ -195,14 +230,14 @@ header {
   display: flex;
   width: 80%;
   height: 100svh;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
   position: fixed;
   top: 0;
   left: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(10px);
   box-shadow: var(--box-shadows);
   z-index: 990;
   border-top-right-radius: 20px;
@@ -227,7 +262,7 @@ header {
   position: absolute;
   background-color: white;
   width: 70%;
-  height: 4px;
+  height: 3px;
   left: 15%;
   border-radius: 20px;
 }
@@ -276,11 +311,11 @@ header {
 
 .sub-nav__links {
   font-style: italic;
-  font-family: var(--font-family-tes);
+  font-family: var(--font-family-accent);
   text-transform: uppercase;
   text-decoration: none;
   color: var(--font-title-colors);
-  font-weight:  900;
+  font-weight:  700;
   font-size: 1.5rem;
   position: relative;
   letter-spacing: 1px;
@@ -729,6 +764,27 @@ iframe {
   border-radius: 20px;
   min-height: 400px;
   width: 100%;
+}
+
+.slides-event {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slides-event img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 80% 50%;
+}
+
+.slides-event.active {
+  opacity: 1;
 }
 
 .event-info {
