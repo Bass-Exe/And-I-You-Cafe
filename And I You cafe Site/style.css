@@ -805,6 +805,13 @@ iframe {
   border-radius: 20px;
 }
 
+/*Calender*/
+
+.calendar iframe{
+  background-color: rgb(1, 1, 1);
+  filter: invert(92%) hue-rotate(50deg); /*To change colors use filters but styling is limited :(*/
+}
+
 /*Testimonials*/
 
 .tes-wrapper {
