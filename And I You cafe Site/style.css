@@ -466,7 +466,7 @@ header {
 .cards {
   flex-grow: 1;
   flex-shrink: 2;
-  width: 50%;
+  width: 100%;
 
   border-radius: 10px;
   padding: 1em;
@@ -544,6 +544,30 @@ header {
 .about-img img {
   border-radius: 10px;
   box-shadow: var(--box-shadows);
+}
+
+/*--------------------------Showcase-----------------------*/
+
+.cards-showcase{
+  overflow: hidden; 
+  cursor: pointer;
+  border-radius: 20px;
+  height: 500px;
+}
+
+.test {
+  border: red solid 2px;
+  height: 100px;
+}
+
+.cards-showcase img{
+  object-fit: cover;
+  height: 100%;
+  transition: scale 250ms ease-in-out;
+}
+
+.cards-showcase img:hover{
+  scale: 1.3;
 }
 
 /*-----------------------------------Menu---------------------------*/
@@ -807,8 +831,11 @@ iframe {
 
 /*Calender*/
 
+
 .calendar iframe{
-  background-color: rgb(1, 1, 1);
+  border: none;
+  border-radius: 20px;
+  min-height: 650px;
   filter: invert(92%) hue-rotate(50deg); /*To change colors use filters but styling is limited :(*/
 }
 
