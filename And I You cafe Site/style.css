@@ -554,7 +554,6 @@ header {
   height: 700px;
   position: relative;
   margin-right: 2em;
-  border: red solid 1px;
 }
 
 
@@ -575,6 +574,8 @@ header {
   bottom: 40px;
   left: 20px;
   color: white;
+  font-size: 2rem;
+  font-family: var(--font-family-tes);
 }
 
 /*-----------------------------------Menu---------------------------*/
@@ -645,12 +646,8 @@ header {
   background-color: var(--bg-block-light-color);
   border-radius: 20px;
   box-shadow: var(--box-shadows);
-  padding: 1.5em 1.5em;
+  padding: 4em 1.5em;
   color: white;
-}
-
-.location div {
-  margin: 2em 0;
 }
 
 .location-text h2 {
@@ -671,7 +668,6 @@ header {
 }
 
 .location-img img {
-  width: 100%;
   box-shadow: var(--box-shadows);
   border-radius: 20px;
 }
@@ -1177,21 +1173,18 @@ form {
     scale: 1.1;
   }
 
-  .location {
-    gap: 30px;
-  }
+.location{
+  gap: 30px;
+}
 
   .location-text {
     width: 40%;
   }
 
-  .location div {
-    color: white;
-  }
-
   .location-img {
     width: 60%;
   }
+
   .carousel-container-event{
     width: 50%;
   }
